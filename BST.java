@@ -71,7 +71,11 @@ public class BST {
             return;
         }
         printTree(current.right);
-        System.out.println(current.data);
+        if(current.data.length() > 20){
+            System.out.println(current.data);
+        } else {
+            System.out.println(current.data.substring(0, 20));
+        }
         printTree(current.left);
     }
     
