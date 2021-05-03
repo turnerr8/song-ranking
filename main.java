@@ -7,11 +7,12 @@ public class main{
     public static void main(String[] args) throws FileNotFoundException {
         Scanner console = new Scanner(System.in);
         BST tree = new BST();
-        String filePath = filePath(console);
-        //phoebe.createTree(text);
-        //phoebe.printTree(phoebe.root);
+        tree.loadTree(new Scanner(new File("./song_files/phoebe_bridgers/punisher.txt")));
+        //String filePath = filePath(console);
+        //tree.createTree(new Scanner(new File(filePath)));
+        tree.printTree();
+        
     }
-
     private static String filePath(Scanner console) throws FileNotFoundException{
         //filepath for artist
         String filePath = "./song_files/";
@@ -30,8 +31,7 @@ public class main{
         System.out.println("~~~~~~~~~~~");
         System.out.print("Choice: ");
         String album = console.nextLine();
-        filePath += album.toLowerCase().replace(" ", "_");
-
+        filePath += album.toLowerCase().replace(" ", "_") +".txt";
 
         return filePath;
 
