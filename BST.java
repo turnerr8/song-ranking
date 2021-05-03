@@ -114,6 +114,15 @@ public class BST {
             loadTreeHelper(song, current.right, counter);
         }
     }
+
+    //tests whether node exists and returns boolean if it does
+    private boolean exists(Node current) {
+        if(current != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     
 
 }
