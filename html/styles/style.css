@@ -1,0 +1,43 @@
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 10% repeat(5, 16% [body-col]) 10%;
+    grid-template-rows: repeat(10, 100px [body]);
+    grid-template-areas: 
+    "header header header header header header header"
+    ". title title title title title ."
+    ". artists artists artists artists artists ."
+    ". artists artists artists artists artists ."
+    ". artists artists artists artists artists ."
+    ". artists artists artists artists artists ."
+    ". artists artists artists artists artists ."
+    ". artists artists artists artists artists ."
+    ". artists artists artists artists artists .";
+}
+
+#title {
+    grid-area: title;
+    background-color: aquamarine;
+    text-align: center;
+    margin: auto 0;
+
+}
+
+#artist-selection {
+    grid-area: artists;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+    background-color: lightgray;
+}
+
+.artist {
+    height: 40px;
+    width: 30%;
+}
