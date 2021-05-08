@@ -14,9 +14,16 @@ body{
     ". artists artists artists artists artists ."
     ". artists artists artists artists artists ."
     ". artists artists artists artists artists ."
-    ". artists artists artists artists artists ."
-    ". artists artists artists artists artists ."
-    ". artists artists artists artists artists .";
+    ;
+}
+
+#navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 60px;
+    width: 100%;
+    background-color: bisque;
 }
 
 #title {
@@ -31,6 +38,7 @@ body{
     grid-area: artists;
     display: flex;
     justify-content: space-around;
+    flex-flow: row wrap;
     text-align: center;
     padding: 15px;
     margin: 15px;
@@ -38,6 +46,9 @@ body{
 }
 
 .artist {
+    flex-shrink: 0;
+
     height: 40px;
     width: 30%;
+    margin: 5% 5%;
 }
